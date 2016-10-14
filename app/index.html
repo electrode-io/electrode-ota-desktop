@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Electrode Over the Air</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="image/svg+xml" href="./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot"/>
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"/>
+
+</head>
+<body>
+<div id="container"></div>
+<script>{
+    window.executor = require('./renderer/executor');
+    if (process.env.HOT) {
+        const script = document.createElement('script');
+        const port = process.env.ELECTRON_HOT_PORT || 4002;
+        script.src = `http://localhost:${port}/electron.js`;
+        script.async = false;
+        document.head.appendChild(script);
+
+    } else {
+        require('./renderer/index');
+    }
+
+}</script>
+
+</body>
+</html>

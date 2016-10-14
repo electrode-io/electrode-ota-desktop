@@ -1,0 +1,16 @@
+{
+  "name": "ElectrodeOTA",
+  "main": "./browser/main.js",
+  "description": "Electrode Over The Air",
+  "author": "Justin Spears <speajus@gmail.com>",
+  "version": "0.14.0",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "code-push": "^1.10.2-beta",
+    "code-push-cli": "^1.12.6-beta",
+    "electrode-ota-ui": "file:///Users/jspear1/walmart/electrode-ota-ui",
+    "font-awesome": "^4.6.3",
+    "source-map-support": "^0.4.3",
+    "which": "^1.2.11"
+  }
+}
