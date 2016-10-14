@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gecgithub01.walmart.com/jspear1/electrode-ota-desktop.git"
+    "url": "git+https://github.com/electrode-io/electrode-ota-desktop/electrode-ota-desktop.git"
   },
   "author": {
     "name": "Justin Spears",
@@ -56,7 +56,7 @@
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://gecgithub01.walmart.com/jspear1/electrode-ota-desktop/issues"
+    "url": "https://github.com/electrode-io/electrode-ota-desktop/electrode-ota-desktop/issues"
   },
   "keywords": [
     "electron",
@@ -65,7 +65,7 @@
     "react-native",
     "cordova"
   ],
-  "homepage": "https://gecgithub01.walmart.com/jspear1/electrode-ota-desktop",
+  "homepage": "https://github.com/electrode-io/electrode-ota-desktop/electrode-ota-desktop",
   "devDependencies": {
     "asar": "^0.12.2",
     "babel-core": "^6.14.0",
