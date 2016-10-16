@@ -29,8 +29,8 @@ First you need node/npm install >6.5.0 [node](https://nodejs.org/en/) from https
 ```sh
 $ mkdir electrode-ota
 $ cd electrode-ota
-$ git clone https://https://github.com/electrode-io/electrode-ota-ui
-$ git clone https://https://github.com/electrode-io/electrode-ota-desktop
+$ git clone https://github.com/electrode-io/electrode-ota-ui
+$ git clone https://github.com/electrode-io/electrode-ota-desktop
 $ cd electrode-ota-ui
 $ npm install
 $ npm run electron
