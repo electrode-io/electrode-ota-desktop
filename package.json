@@ -11,8 +11,8 @@
     "eb:run": "cross-env NODE_ENV=development  electron --dev app",
     "eb:dev": "npm run eb:webpack-dev-server & cross-env NODE_ENV=development HOT=1 electron --dev app",
     "eb:pack": "npm run eb:compile && build --dir",
-    "eb:dist": "cross-env NODE_ENV=production build",
-    "eb:release": "cross-env NODE_ENV=production build",
+    "eb:compile":"cd ../electrode-ota-ui && cross-env NODE_ENV=production ./node_modules/.bin/webpack --output-path ../electrode-ota-desktop/app/out --config ./webpack.electron.config --progress --stats",
+    "eb:release": "npm run eb:compile && cross-env NODE_ENV=production build",
     "eb:webpack-dev-server": "cd ../electrode-ota-ui && cross-env NODE_ENV=development HOT=1 ./node_modules/.bin/webpack-dev-server  --entry electron=../electrode-ota-desktop/app/renderer/index --hot --inline --config ./webpack.electron.config ",
     "eb:sign": "CSC_NAME=\"Mac Developer: jspears\" NODE_ENV=production DEBUG=electron-osx-sign*  build --osx"
   },
