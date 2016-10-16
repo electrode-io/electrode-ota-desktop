@@ -9,6 +9,8 @@ if (devMode) {
     console.log('Development Path', devPath);
     // load the app dependencies
     require('module').globalPaths.push(devPath);
+
+    require('electron-debug')({showDevTools: true});
 }
 
 /*

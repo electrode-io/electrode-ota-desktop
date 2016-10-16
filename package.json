@@ -11,15 +11,15 @@
     "eb:run": "cross-env NODE_ENV=development  electron --dev app",
     "eb:dev": "npm run eb:webpack-dev-server & cross-env NODE_ENV=development HOT=1 electron --dev app",
     "eb:pack": "npm run eb:compile && build --dir",
-    "eb:dist": "cross-env NODE_ENV=production build",
-    "eb:release": "cross-env NODE_ENV=production build",
-    "eb:webpack-dev-server":"cd ../electrode-ota-ui && cross-env NODE_ENV=development HOT=1 ELECTRODE_ENTRY=../electrode-ota-desktop/app/renderer/index ./node_modules/.bin/webpack-dev-server --hot --inline --config ./webpack.electron.config ",
-    "eb:env":"env"
+    "eb:compile":"cd ../electrode-ota-ui && cross-env NODE_ENV=production ./node_modules/.bin/webpack --output-path ../electrode-ota-desktop/app/out --config ./webpack.electron.config --progress --stats",
+    "eb:release": "npm run eb:compile && cross-env NODE_ENV=production build",
+    "eb:webpack-dev-server": "cd ../electrode-ota-ui && cross-env NODE_ENV=development HOT=1 ./node_modules/.bin/webpack-dev-server  --entry electron=../electrode-ota-desktop/app/renderer/index --hot --inline --config ./webpack.electron.config ",
+    "eb:sign": "CSC_NAME=\"Mac Developer: jspears\" NODE_ENV=production DEBUG=electron-osx-sign*  build --osx"
   },
   "build": {
-    "appId": "electrode.ota.desktop",
+    "appId": "com.electrode.ota",
     "dmg": {
-      "background": "./background.png",
+      "background": "./app/images/background.png",
       "contents": [
         {
           "x": 110,
@@ -89,6 +89,7 @@
     "devtron": "^1.3.0",
     "electron": "^1.4.3",
     "electron-builder": "^7.11.4",
+    "electron-debug": "^1.0.1",
     "electron-devtools-installer": "^2.0.1",
     "electron-rebuild": "^1.2.1",
     "enzyme": "^2.4.1",
@@ -113,6 +114,7 @@
     "code-push-cli": "^1.12.5-beta",
     "css-modules-require-hook": "^4.0.3",
     "electron-debug": "^1.0.1",
+    "electron-osx-sign": "^0.3.2",
     "font-awesome": "^4.6.3",
     "fontawesome": "^4.5.0",
     "plist": "^2.0.1",
