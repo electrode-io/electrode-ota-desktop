@@ -7,7 +7,58 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="image/svg+xml" href="./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot"/>
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"/>
+    <style type="text/css" media="screen">
 
+        .ota-loading-done .ota-loading:before, .ota-loading-done .ota-loading:after {
+            transition: transform 1s ease-in-out, opacity 1s ease-out, z-index 1s ease-in-out;
+            opacity: .01;
+            z-index: -100;
+            transform: scale(0, 0);
+        }
+
+        .ota-loading {
+            opacity: .99;
+            z-index: 100;
+            position: fixed;
+        }
+
+        .ota-loading:before {
+            content: ' ';
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            -webkit-mask-image: url(./images/logo.svg);
+            width: 100vw;
+            height: 100vh;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center center;
+            animation: pulse 2s ease infinite;
+        }
+
+        .ota-loading:after {
+            content: 'Loading...';
+            display: block;
+            position: fixed;
+            top: 60%;
+            margin: 0 auto;
+            left: 50%;
+            font-family: monaco;
+            transform: translateX(-50%);
+
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                background-color: #ccc;
+            }
+
+            50% {
+                background-color: blue;
+            }
+        }
+
+    </style>
 </head>
 <body>
 <div id="container"></div>
@@ -25,6 +76,8 @@
     }
 
 }</script>
+<div class="ota-loading">
 
+</div>
 </body>
 </html>

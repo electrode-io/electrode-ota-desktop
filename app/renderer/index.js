@@ -1,4 +1,3 @@
-
 const path = require('path');
 const fs = require('fs');
 const app = process.env.HOT ? require('electrode-ota-ui') : require('electrode-ota-ui/dist/electron')['electrode-ota-ui'];
@@ -28,5 +27,5 @@ const loadConfig = ()=> {
     return {};
 
 };
-
-module.exports = app.default(loadConfig(), 'container', window.executor);
+const end = _=> document.body.classList.add('ota-loading-done');
+module.exports = app.default(loadConfig(), 'container', window.executor).then(end, end);
