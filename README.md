@@ -33,7 +33,6 @@ $ git clone https://github.com/electrode-io/electrode-ota-ui
 $ git clone https://github.com/electrode-io/electrode-ota-desktop
 $ cd electrode-ota-ui
 $ npm install
-$ npm run electron
 $ cd ../electrode-ota-desktop
 $ npm install
 $ npm run distro
