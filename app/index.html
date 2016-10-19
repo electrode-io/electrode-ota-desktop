@@ -68,7 +68,7 @@
         const script = document.createElement('script');
         const port = process.env.ELECTRON_HOT_PORT || 4002;
         script.src = `http://localhost:${port}/electron.js`;
-        script.async = false;
+        script.charset = 'utf8';
         document.head.appendChild(script);
 
     } else {

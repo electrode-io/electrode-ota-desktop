@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const app = process.env.HOT ? require('electrode-ota-ui') : require('../out/electron');
+const app = process.env.HOT ? require('electrode-ota-ui'): require('electrode-ota-ui-electron');
 
 const loadConfig = ()=> {
     if (sessionStorage.host && sessionStorage.token) {
