@@ -7,6 +7,10 @@ Download the latest [here](releases)
 
 ![NewToken.png](./docs/imgs/NewToken.png)
 ![install](./docs/imgs/DMG.png)
+
+
+To Login enter the host running the codepush management server or https://codepush-management.azurewebsites.net to use microsoft's code-push management server.
+
 ![Login.png](./docs/imgs/Login.png)
 ![GettingStarted.png](./docs/imgs/GettingStarted.png)
 ![NewAppSuccess.png](./docs/imgs/NewAppSuccess.png)
