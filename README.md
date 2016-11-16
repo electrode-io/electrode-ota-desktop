@@ -25,8 +25,7 @@ To Login enter the host running the codepush management server or https://codepu
 
 ###Development
 The Electrode OTA Desktop is an electron app. Most of the UI code is in [electrode-ota-ui](../electrode-ota-ui). Due
-to various technical and time constraints both need to be installed for this to work correctly.   They have not been publicly
-published yet so bear with the nuttyness.
+to various technical and time constraints both need to be installed for this to work correctly.   
 
 First you need node/npm install >6.5.0 [node](https://nodejs.org/en/) from https://nodejs.org/en/
  
