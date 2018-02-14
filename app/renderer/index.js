@@ -1,8 +1,8 @@
 const path = require('path');
 const fs = require('fs');
-const app = process.env.HOT ? require('electrode-ota-ui'): require('electrode-ota-ui-electron');
+const app = process.env.HOT ? require('electrode-ota-ui') : require('electrode-ota-ui/dist/electron')['electrode-ota-ui'];
 
-const loadConfig = ()=> {
+const loadConfig = () => {
     if (sessionStorage.host && sessionStorage.token) {
         return {
             authorization: {
@@ -27,5 +27,5 @@ const loadConfig = ()=> {
     return {};
 
 };
-const end = _=> document.body.classList.add('ota-loading-done');
+const end = _ => document.body.classList.add('ota-loading-done');
 module.exports = app.default(loadConfig(), 'container', window.executor).then(end, end);
