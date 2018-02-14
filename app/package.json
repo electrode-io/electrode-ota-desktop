@@ -7,7 +7,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "code-push-cli": "^1.12.6-beta",
-    "electrode-ota-ui-electron": "0.0.13",
+    "electrode-ota-ui": "^3.2.5-0",
     "font-awesome": "^4.6.3"
   }
 }

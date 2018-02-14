@@ -13,7 +13,8 @@
     "eb:pack": "npm run eb:compile && build --dir",
     "eb:release": " cross-env NODE_ENV=production build",
     "eb:webpack-dev-server": "cd ../electrode-ota-ui && cross-env NODE_ENV=development HOT=1 PORT=4002 ENTRY_FILE=../electrode-ota-desktop/app/renderer/index ./node_modules/.bin/webpack-dev-server --hot --inline --devtool inline-source-map  --config ./webpack.electron.config.js",
-    "eb:sign": "CSC_NAME=\"Mac Developer: jspears\" NODE_ENV=production DEBUG=electron-osx-sign*  build --osx"
+    "eb:sign": "CSC_NAME=\"Mac Developer: jspears\" NODE_ENV=production DEBUG=electron-osx-sign*  build --osx",
+    "test": "mocha --timeout 20000 --require node_modules/babel-core/register --require babel-polyfill test/**/*.js"
   },
   "build": {
     "appId": "com.electrode.ota",
@@ -112,7 +113,7 @@
     "bootstrap": "^3.3.7",
     "code-push-cli": "^1.12.5-beta",
     "css-modules-require-hook": "^4.0.3",
-    "electrode-ota-ui-electron": "0.0.12",
+    "electrode-ota-ui": "^3.2.5-0",
     "electron-debug": "^1.0.1",
     "electron-osx-sign": "^0.3.2",
     "font-awesome": "^4.6.3",

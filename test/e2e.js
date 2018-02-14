@@ -1,8 +1,7 @@
 import { Application } from 'spectron';
 import { expect } from 'chai';
 import electronPath from 'electron';
-import homeStyles from '../app/components/Home.css';
-import counterStyles from '../app/components/Counter.css';
+import path from 'path';
 
 const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
@@ -12,7 +11,7 @@ describe('main window', function spec() {
   before(async () => {
     this.app = new Application({
       path: electronPath,
-      args: ['.'],
+      args: [path.join(__dirname, '../app')]
     });
     return this.app.start();
   });
@@ -23,19 +22,12 @@ describe('main window', function spec() {
     }
   });
 
-  const findCounter = () => this.app.client.element(`.${counterStyles.counter}`);
-
-  const findButtons = async () => {
-    const { value } = await this.app.client.elements(`.${counterStyles.btn}`);
-    return value.map(btn => btn.ELEMENT);
-  };
-
   it('should open window', async () => {
     const { client, browserWindow } = this.app;
 
     await client.waitUntilWindowLoaded();
     await delay(500);
     const title = await browserWindow.getTitle();
-    expect(title).to.equal('Hello Electron React!');
+    expect(title).to.equal('Electrode Over the Air');
   });
 });
