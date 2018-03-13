@@ -2,7 +2,7 @@ Electrode OTA Desktop
 ===
 A GUI for the code-push command line.
 
-Download the latest [here](/releases)
+Download the latest [here](https://github.com/electrode-io/electrode-ota-desktop/releases)
 
 
 ![NewToken.png](./docs/imgs/NewToken.png)
