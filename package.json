@@ -113,7 +113,7 @@
     "bootstrap": "^3.3.7",
     "code-push-cli": "^1.12.5-beta",
     "css-modules-require-hook": "^4.0.3",
-    "electrode-ota-ui": "^3.2.5-0",
+    "electrode-ota-ui": "^4.4.3",
     "electron-debug": "^1.0.1",
     "electron-osx-sign": "^0.3.2",
     "font-awesome": "^4.6.3",
