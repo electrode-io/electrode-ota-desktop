@@ -32,11 +32,12 @@ First you need node/npm install >6.5.0 [node](https://nodejs.org/en/) from https
 ```sh
 $ mkdir electrode-ota
 $ cd electrode-ota
-$ git clone https://github.com/electrode-io/electrode-ota-ui
+$ git clone https://github.com/electrode-io/electrode-ota-server
+$ ln -s electrode-ota-server/electrode-ota-ui electrode-ota-ui
 $ git clone https://github.com/electrode-io/electrode-ota-desktop
 $ cd electrode-ota-ui
 $ npm install
-$ cd ../electrode-ota-desktop
+$ cd ../../electrode-ota-desktop
 $ npm install
 $ npm run distro
 $ #To test the app
