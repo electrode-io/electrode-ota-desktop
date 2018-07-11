@@ -1,7 +1,7 @@
 {
   "name": "electrode-ota-desktop",
   "productName": "ElectrodeOTA",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "description": "Electrode OTA (CodePush)",
   "main": "main.js",
   "scripts": {
