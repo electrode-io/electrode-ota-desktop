@@ -3,11 +3,11 @@
   "main": "./browser/main.js",
   "description": "Electrode Over The Air",
   "author": "Justin Spears <speajus@gmail.com>",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "code-push-cli": "^1.12.6-beta",
-    "electrode-ota-ui": "^4.4.3",
+    "electrode-ota-ui": "^4.4.15",
     "font-awesome": "^4.6.3"
   }
 }
